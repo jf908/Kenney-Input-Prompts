@@ -8,7 +8,9 @@ if (!fs.existsSync('svg')) {
 }
 
 // Fetch website
-const res = await fetch('https://kenney.nl/assets/input-prompts');
+const res = await fetch('https://kenney.nl/assets/input-prompts', {
+  headers: { 'User-Agent': 'github.com/jf908/Kenney-Input-Prompts' },
+});
 const text = await res.text();
 
 // Extract version
@@ -21,7 +23,9 @@ if (newVersion !== latest) {
   const link = text.match(/<a id='donate-text' href='([^']+)'/)[1];
 
   // Download zip
-  const zip = await fetch(link);
+  const zip = await fetch(link, {
+    headers: { 'User-Agent': 'github.com/jf908/Kenney-Input-Prompts' },
+  });
 
   // Create buffer
   const buffer = Buffer.from(await zip.arrayBuffer());
