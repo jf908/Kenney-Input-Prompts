@@ -1,0 +1,21 @@
+{
+  "name": "kenney-input-prompts",
+  "version": "1.0.0",
+  "description": "A git repo of Kenney's Input Prompts SVGs.",
+  "main": "scripts/update.mjs",
+  "scripts": {
+    "update-icons": "node scripts/update.mjs"
+  },
+  "keywords": [],
+  "author": "jf908",
+  "contributors": [
+    {
+      "name": "Kenney",
+      "url": "https://kenney.nl/"
+    }
+  ],
+  "license": "CC0",
+  "devDependencies": {
+    "yauzl": "^3.1.2"
+  }
+}
